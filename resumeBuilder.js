@@ -80,7 +80,7 @@ var bio ={
             "location" : "USA"
         }
     ],
-    "welcomeMessage" : "I'm an ambitious technology professional who finds pleasure in developing software and growing businesses using innovative thinking and tested techniques.",
+    "welcomeMessage" : "With more than 2 years of experience and knowledge in software industry, I am a highly accomplished, skilled and knowledgeable Software Engineer with work expertise in different technologies such as (Java, SQL, HTML, XHTML, CSS and JavaScript). I am looking for opportunities to move to the next level of being a developer while taking on more technical challenge and leadership endeavors in my career. I am seeking a position that will challenge my problem solving skills and enhance my knowledge and potential in the industry.",
     "Picture" : "images/1.jpg",
     "Skills" : ["* Java/J2EE" , "* C/C++", "* SQL","* JavaScript","* HTML/CSS", "* OpenGL/Advance"],
     "Web" : ["* JavaScript", "* Angular","* Ember", "* Backbone", "* HTML/HTML5", "* CSS"],
@@ -120,8 +120,8 @@ var projects ={
     "project" :[
         {
             "title" : "Artificial Intelligence using Genetic Algorithm",
-            "technology" : "Unity 3D, Java, SQL , Genetic Algotithm",
-            "dates" : "4 - Month ",
+            "technology" : "",
+            "dates" : "4 - Month  - [ Unity 3D, Java, SQL , Genetic Algorithm ]",
             "description" : "•	Created an application that will determine whether the satellite reach the moon." +
             "•	Genetic algorithm help to find the trivia parameters that are used in calculation of trajectories in launching the satellites from earth to moon." +
             "•	I get a population of satellites which have higher chance to hit the moon with the help of fitness function." +
@@ -136,8 +136,8 @@ var projects ={
 
         {
             "title" : "3D game using Opengl",
-            "technology" : "Unity 3D, Java, SQL , Genetic Algotithm",
-            "dates" : "3 - Month ",
+            "technology" : "",
+            "dates" : "3 - Month  - [ OpenGL ,Modern OpenGL, C/C++, Visual Studio]",
             "description" : "•	Created a 3D game where I utilized the concepts like viewing and camera: modelling, transformation, clipping, color." +
             "•	Shading and lighting: light source, rendering of surfaces, antialiasing, fog, texture mapping; others: frame buffering, tessellators, collision detection." +
             "•	•	I used GLEW, GLUT, FREEGLUT, GLU, GLFW OpenGL library tool kit in order to complete the project." +
@@ -146,7 +146,43 @@ var projects ={
             "•	Created skybox to make the scene looks bigger and more impressive by wrapping the viewer with a texture that goes around the camera 360 degree. " +
             "•	The main idea behind the skybox is to render a big cube and place the viewer at its center."
 
+        },
+        {
+            "title" : "Network Provenance",
+            "technology" : "",
+            "dates" : "3 - Month  - [ Cisco Packet Tracer, Java, Swing, SQL and MYSQL ]",
+            "description" : "•	Created a 3D game where I utilized the concepts like viewing and camera: modelling, transformation, clipping, color." +
+            "•	Shading and lighting: light source, rendering of surfaces, antialiasing, fog, texture mapping; others: frame buffering, tessellators, collision detection." +
+            "•	•	I used GLEW, GLUT, FREEGLUT, GLU, GLFW OpenGL library tool kit in order to complete the project." +
+            "•	I created a terrain with a concept called height map." +
+            "•	•	Then implemented a tree using Fractals. Fractals is a useful way to drawing some real life like objects where some pattern recurs. I have drawn single line and then recurring sub trees. " +
+            "•	Created skybox to make the scene looks bigger and more impressive by wrapping the viewer with a texture that goes around the camera 360 degree. " +
+            "•	The main idea behind the skybox is to render a big cube and place the viewer at its center."
+
+        },
+        {
+            "title" : "Meet Up Event Planner",
+            "technology" : "",
+            "dates" : "1 - Month  - [JavaScript, HTML/HTML5 , CSS and Object-Oriented Concepts ]",
+            "description" : "•	Any meaningful experience on the web has a form. Whether it's a form made of text boxes, toggles, buttons, checkboxes, or touchable widgets," +
+            " web developers need to be purposeful about forms to make users happy and increase conversions.•	" +
+            "It’s a responsive web application that allows user to establish a meet-up event.•	This app is applicable both in desktop and mobile.•	This application " +
+            "allows user to name their event, search for host location (using a location API like Foursquare), set the capacity of the event, start and end time," +
+            " and input a description of the event."
+
+        },
+        {
+            "title" : " CURRENT PROJECT : Neighborhood Map",
+            "technology" : "",
+            "dates" : "Present   - [JavaScript, jQuery, HTML/HTML5 , CSS and AngularJS]",
+            "description" : "•	Developing a single-page application featuring a map of the user’s neighborhood or a " +
+            "neighborhood user like to visit. Trying to add additional functionality like map marker to identify popular " +
+            "location or places user like to visit.•	Search function to easily discover theses location, and a list view to support " +
+            "simple browsing of all location. •	Implementing third party API which will provide additional information about the locations " +
+            "(such as StreetView images, Wikipedia article, Yelp review etc.)"
+
         }
+
 
     ]
 
@@ -186,23 +222,24 @@ bio.display = function () {
     var formatedMessage =HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
     var formatedImage = HTMLbioPic.replace("%data%",bio.Picture);
     $("#header").append(formatedName).append(formatedRole).append(formatedImage);
-    $("#header").append(HTMLskillsStart,HTMLwebStart,HTMLsecurityStart);
+   // $("#header").append(HTMLskillsStart,HTMLwebStart,HTMLsecurityStart);
+    $("#header").append(formatedMessage);
 
-   for(skill in bio.Skills){
-      var formatedSkills = HTMLskills.replace("%data%",bio.Skills[skill]);
-     $("#skills").append(formatedSkills);
+  // for(skill in bio.Skills){
+    //  var formatedSkills = HTMLskills.replace("%data%",bio.Skills[skill]);
+     //$("#skills").append(formatedSkills);
 
-   }
-   for (web in bio.Web){
-       var formatedWeb = HTMLskills.replace("%data%",bio.Web[web]);
+   //}
+  // for (web in bio.Web){
+    //   var formatedWeb = HTMLskills.replace("%data%",bio.Web[web]);
       // $("#web").append(formatedWeb);
 
-   }
-    for (sec in bio.Security){
-        var formatedSecurity = HTMLskills.replace("%data%",bio.Security[sec]);
+   //}
+    //for (sec in bio.Security){
+      //  var formatedSecurity = HTMLskills.replace("%data%",bio.Security[sec]);
        // $("#security").append(formatedSecurity);
 //
-    }
+    //}
 
 
     for(contact in bio.contacts) {
@@ -300,6 +337,8 @@ projects.display = function () {
         var formatedTitle = HTMLprojectTitle.replace("%data%",projects.project[item].title);
         var formatedDate = HTMLprojectDates.replace("%data%",projects.project[item].dates);
         var formatedDescription = HTMLprojectDescription.replace("%data%",projects.project[item].description);
+        var formatedSkills = HTMLschoolLocation.replace("%data%",projects.project[item].technology);
+        $("#projects").append(formatedSkills);
 
         $(".project-entry:last").append(formatedTitle,formatedDate,formatedDescription);
 
